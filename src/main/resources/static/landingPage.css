@@ -1,0 +1,117 @@
+
+/* FROM HERE BANNER STARTS */
+
+.banner {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.banner img {
+    width: 100%;
+    height: 820px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 45%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 400px;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: black;
+    text-align: center;
+    width: 260px;
+    font-size: 20px;
+    border-radius: 30px;
+
+}
+/* FROM HERE ITEMS STARTS */
+.items {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 20px;
+}
+
+.item {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    margin-right: 1em;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* FROM HERE ARTICLE STARTS */
+.article-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+.article {
+    width: 670px;
+    padding: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-article {
+    box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+    -webkit-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+    -moz-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+    margin-bottom: 40px;
+}
+.sredina-tekst {
+    font-size: 20px;
+}
+.article-image {
+    margin-left: 2em;
+    width: 400px;
+    height: 480px;
+}
+.relax {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gif {
+    width: 400px;
+    height: 400px;
+}
+
+/* FROM HERE starts footer */
+
+.article2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

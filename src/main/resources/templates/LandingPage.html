@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LandingPage</title>
+    <link rel="stylesheet" type="text/css" th:href="@{./fontovi/RobotoCondensed-Bold.ttf}"/>
+    <link rel="stylesheet" type="text/css" href="./headerFooter.css" />
+    <link rel="stylesheet" type="text/css" href="./landingPage.css" />
+    <style>
+        * {
+            font-family: 'RobotoCondensed-Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <img src="../Sliki/Logo.png" alt="Company Logo" />
+    </div>
+    <ul>
+        <li><a href="/home">Почетна</a></li>
+        <li><a href="/machines">Модели</a></li>
+        <li><a href="#aboutus">За нас</a></li>
+        <li><a href="/contactUs">Контакт</a></li>
+    </ul>
+</nav>
+
+<div class="banner">
+    <img src="../Sliki/UnderHeader.jpg" alt="Banner Image" />
+    <div class="banner-text">
+        <h1>КОГА ЦЕЛИОТ СВЕТ ЗАСТАНУВА, НИЕ СЕ ДВИЖИМЕ.</h1>
+
+        <button href="facebook.com" class="banner-button">
+            <a>Дознај повеќе</a>
+        </button>
+    </div>
+</div>
+<div class="items">
+    <ul>
+        <li><a href="/machines/1" class="item">Рабни машини</a></li>
+        <li><a href="/machines/2" class="item">Машини за збирно пакување</a></li>
+        <li><a href="/machines/3" class="item">Етикетирки</a></li>
+        <li><a href="/machines/4" class="item">Пакерки</a></li>
+        <li><a href="/machines/5" class="item"> Машини Полици</a></li>
+    </ul>
+</div>
+<div class="article-container">
+    <div class="article first-article" id="aboutus">
+        <h1>ЗА НАС</h1>
+        <p>
+            Inox creative е долгогодишна фирма од Македонија која работи на
+            производство на машини, нашите цели се да ви обезбедиме пријатна
+            работа, а за подетални информации
+            <br />
+            ->We make stuff happen.
+        </p>
+        <button href="facebook.com" class="banner-button">
+            <a>Дознај повеќе</a>
+        </button>
+    </div>
+
+    <img
+            src="../Sliki/slika6.jpg"
+            alt="Article Image"
+            class="article-image"
+    />
+</div>
+<div class="content">
+    <img src="../Sliki/gif.gif" alt="Article Image" class="gif" />
+    <div class="article">
+        <p class="sredina-tekst">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            vitae assumenda quibusdam nam distinctio natus dignissimos?
+            Consequatur numquam mollitia nisi ratione, omnis dolor adipisci vel
+            dolorem commodi quidem fugiat aliquid, similique sequi sint eaque
+            cupiditate perferendis velit quasi illo sed provident, earum tenetur
+            ipsam et. Voluptatem eos accusamus non ipsa itaque? Temporibus,
+            accusamus! Possimus nam voluptas odit explicabo minus necessitatibus.
+        </p>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article article2">
+        <p class="relax">
+            Релаксирајте се и оставите на нашите машини да ве доведат до
+            совршенство.
+        </p>
+        <button  class="banner-button">
+            <a href="/contactUs">Контактирај не</a>
+        </button>
+    </div>
+
+    <img
+            src="../Sliki/animacija.gif"
+            alt="Article Image"
+            class="article-image"
+    />
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>Copyright ©2023 Inox Creative</p>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/home">Почетна</a></li>
+                <li><a href="/machines">Модели</a></li>
+                <li><a href="#aboutus">За нас</a></li>
+                <li><a href="/contactUs">Контакт</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

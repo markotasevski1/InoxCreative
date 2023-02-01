@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machines</title>
+    <link rel="stylesheet" type="text/css" href="./machinesPage.css" />
+    <link rel="stylesheet" type="text/css" href="./headerFooter.css" />
+    <link rel="stylesheet" type="text/css" th:href="@{./fontovi/RobotoCondensed-Bold.ttf}"/>
+    <style>
+        * {
+            font-family: 'RobotoCondensed-Bold', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            height: 100px;
+            border-bottom: 1px solid black;
+        }
+        .logo {
+            height: 130px;
+            margin-left: 120px;
+        }
+        .logo img {
+            height: 100%;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin-right: 150px;
+        }
+
+        li {
+            margin-left: 2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00bfff;
+        }
+
+        /* FROM HERE STARTS FOOTER */
+
+        footer {
+            background-color: #ffffff;
+            padding: 1em;
+            padding: 30px;
+            border-top: 2px solid black;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+            flex: 1;
+        }
+
+        .footer-right ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .footer-right li {
+            margin-left: 1em;
+        }
+
+        .footer-right a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        * {
+
+        }
+        .page {
+            background-color: #f3f0f0;
+        }
+        .article-page-title {
+            padding: 60px;
+            text-align: center;
+        }
+        .article-container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .article-image {
+            width: auto;
+            height: auto;
+            max-width: 500px;
+            max-height: 500px;
+            padding: 0px 20px;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+            -webkit-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+            -moz-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+        }
+
+        .article-text {
+            width: 40%;
+            padding: 0px 20px;
+            box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            -webkit-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            -moz-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            text-align: left;
+            font-size: 18px;
+            padding-top: 80px;
+            background-color: #f7f0f0;
+        }
+        .article-text > h1 {
+            font-size: 26px;
+        }
+        .article-text-left {
+            box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+            -webkit-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+            -moz-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
+        }
+
+        .article-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .short-description {
+            margin-left: 30px;
+        }
+
+        .read-more {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <img src="../Sliki/Logo.png" alt="Company Logo" />
+    </div>
+    <ul>
+        <ul>
+            <li><a href="/home">Почетна</a></li>
+            <li><a href="/machines">Модели</a></li>
+            <li><a href="/home">За нас</a></li>
+            <li><a href="/contactUs">Контакт</a></li>
+        </ul>
+    </ul>
+</nav>
+<div class="page">
+    <div class="article-page-title">
+
+        <h1>РАЗГЛЕДАЈТЕ ГИ РАБОТИТЕ ШТО <br>
+            СМЕ ГИ ДОСЕГА НАПРАВИЛЕ &#128080</h1>
+
+        <span th:text="${Categories.name}"></span>
+    </div>
+    <div class="short-description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum officiis, sapiente dolorum perferendis repellendus earum. &#128161
+    </div>
+    <div class="article-container">
+        <div class="article-image">
+            <img src="../Sliki/slika2.jpg" alt="Article Image" />
+        </div>
+        <div class="article-text">
+
+            <h1 class="article-title">Article Title</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue,
+                ipsum vel tincidunt blandit, magna est aliquam augue, id commodo quam
+                sapien eget ligula. Sed condimentum auctor elit eu bibendum. Nam porta
+                augue id elit elementum, in bibendum orci varius. &#128175
+            </p>
+            <button class="read-more">Read More</button>
+        </div>
+    </div>
+    <div class="article-container">
+        <div class="article-text article-text-left">
+            <h1 class="article-title">Article Title</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue,
+                ipsum vel tincidunt blandit, magna est aliquam augue, id commodo quam
+                sapien eget ligula. Sed condimentum auctor elit eu bibendum. Nam porta
+                augue id elit elementum, in bibendum orci varius.
+            </p>
+            <button class="read-more">Read More</button>
+        </div>
+        <div class="article-image">
+            <img src="../Sliki/slika3.jpg" alt="Article Image" />
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>Copyright ©2023 Inox Creative</p>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/home">Почетна</a></li>
+                <li><a href="/machines">Модели</a></li>
+                <li><a href="/home">За нас</a></li>
+                <li><a href="/contactUs">Контакт</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
