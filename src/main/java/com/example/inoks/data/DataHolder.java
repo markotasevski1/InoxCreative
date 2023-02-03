@@ -20,11 +20,13 @@ public class DataHolder {
 
     @PostConstruct
       public void init() {
-        Machine machine1=new Machine(1,"test1","descriptionTest",2020);
-        Machine machine2=new Machine(2,"test2","descriptionTest",2020);
-        Machine machine3=new Machine(3,"test3","descriptionTest",2020);
-        Machine machine4=new Machine(4,"test4","descriptionTest",2020);
+        Machine machine1=new Machine(1,"test1","descriptionTest",2020,"slika1.jpg");
+        Machine machine2=new Machine(2,"test2","descriptionTest",2020,"slika2.jpg");
+        Machine machine3=new Machine(3,"test3","descriptionTest",2020,"slika3.jpg");
+        Machine machine4=new Machine(4,"test4","descriptionTest",2020,"slika4.jpg");
 
+        machines1.add(machine1);
+        machines1.add(machine2);
         machines1.add(machine1);
         machines1.add(machine2);
 
@@ -32,8 +34,8 @@ public class DataHolder {
         machines2.add(machine4);
 
         Category category1=new Category(1,"Rabni Masini",machines1);
-        Category category2=new Category(2,"Masini za zbirno pakuvanje",machines1);
-        Category category3=new Category(3,"Etiketirki",machines1);
+        Category category2=new Category(2,"Masini za zbirno pakuvanje",machines2);
+        Category category3=new Category(3,"Etiketirki",machines2);
         Category category4=new Category(4,"Pakerki",machines1);
         Category category5=new Category(5,"Masini polici",machines1);
 

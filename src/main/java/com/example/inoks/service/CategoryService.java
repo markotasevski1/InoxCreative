@@ -1,6 +1,7 @@
 package com.example.inoks.service;
 
 import com.example.inoks.model.Category;
+import com.example.inoks.model.Machine;
 import com.example.inoks.repository.InMemoryCategoryRepo;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,14 @@ public class CategoryService {
     }
     public Category findByName(String name){
         return this.inMemoryCategoryRepo.findByName(name);
+    }
+    public List<Machine> listMachinesFromCategory(Integer id)
+    {
+       return inMemoryCategoryRepo.returnMachinesFromCategory(id);
+    }
+    public List<Machine> listAllMachines()
+    {
+        return inMemoryCategoryRepo.listAllMachines();
     }
 
 }

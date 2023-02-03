@@ -101,53 +101,9 @@
             padding: 60px;
             text-align: center;
         }
-        .article-container {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            padding-top: 60px;
-            padding-bottom: 30px;
-        }
 
-        .article-image {
-            width: auto;
-            height: auto;
-            max-width: 500px;
-            max-height: 500px;
-            padding: 0px 20px;
-        }
-        .article-image img {
-            width: 100%;
-            height: 100%;
-            box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
-            -webkit-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
-            -moz-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
-        }
 
-        .article-text {
-            width: 40%;
-            padding: 0px 20px;
-            box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
-            -webkit-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
-            -moz-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
-            text-align: left;
-            font-size: 18px;
-            padding-top: 80px;
-            background-color: #f7f0f0;
-        }
-        .article-text > h1 {
-            font-size: 26px;
-        }
-        .article-text-left {
-            box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
-            -webkit-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
-            -moz-box-shadow: -10px 7px 10px 6px rgba(160, 160, 160, 1);
-        }
 
-        .article-title {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
         .short-description {
             margin-left: 30px;
         }
@@ -164,6 +120,43 @@
         @media only screen and (max-width: 600px) {
 
         }
+        .machine{
+
+
+            display:flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+        .machine .machine-image{
+            width: auto;
+            height: auto;
+            max-width: 500px;
+            max-height: 500px;
+            padding: 0px 20px;
+
+            box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+            -webkit-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+            -moz-box-shadow: 0px 1px 19px 7px rgba(114, 114, 114, 1);
+        }
+        .machine-text
+        {
+            width: 40%;
+            padding: 0px 20px;
+            box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            -webkit-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            -moz-box-shadow: 9px 5px 10px 6px rgba(160, 160, 160, 1);
+            text-align: left;
+            font-size: 18px;
+            padding-top: 80px;
+            background-color: #f7f0f0;
+        }
+        .machine-text h1{
+
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
 
     </style>
 </head>
@@ -175,7 +168,7 @@
     <ul>
         <ul>
             <li><a href="/home">Почетна</a></li>
-            <li><a href="/machines">Модели</a></li>
+            <li><a href="/partners">Партнери</a></li>
             <li><a href="/home">За нас</a></li>
             <li><a href="/contactUs">Контакт</a></li>
         </ul>
@@ -192,37 +185,21 @@
     <div class="short-description">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum officiis, sapiente dolorum perferendis repellendus earum. &#128161
     </div>
-    <div class="article-container">
-        <div class="article-image">
-            <img src="../Sliki/slika2.jpg" alt="Article Image" />
-        </div>
-        <div class="article-text">
+    <div th:each="machine : ${machines}">
+                <div class="machine" >
+                    <div>
+                        <img th:src="@{ '../Sliki/' + ${machine.photopath}}" alt="Machine image"  class="machine-image"/>
+                    </div>
+                    <div class="machine-text">
+                        <h1>Name: <span th:text="${machine.name}"></span></h1>
+                        <p>Type: <span th:text="${machine.description}"></span></p>
+                        <button class="read-more">Read More</button>
+                        <p>Произведена во: <span th:text="${machine.yearCreated}"> година</span></p>
+                    </div>
+                </div>
 
-            <h1 class="article-title">Article Title</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue,
-                ipsum vel tincidunt blandit, magna est aliquam augue, id commodo quam
-                sapien eget ligula. Sed condimentum auctor elit eu bibendum. Nam porta
-                augue id elit elementum, in bibendum orci varius. &#128175
-            </p>
-            <button class="read-more">Read More</button>
         </div>
-    </div>
-    <div class="article-container">
-        <div class="article-text article-text-left">
-            <h1 class="article-title">Article Title</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue,
-                ipsum vel tincidunt blandit, magna est aliquam augue, id commodo quam
-                sapien eget ligula. Sed condimentum auctor elit eu bibendum. Nam porta
-                augue id elit elementum, in bibendum orci varius.
-            </p>
-            <button class="read-more">Read More</button>
-        </div>
-        <div class="article-image">
-            <img src="../Sliki/slika3.jpg" alt="Article Image" />
-        </div>
-    </div>
+
 </div>
 <footer>
     <div class="footer-container">
@@ -232,7 +209,7 @@
         <div class="footer-right">
             <ul>
                 <li><a href="/home">Почетна</a></li>
-                <li><a href="/machines">Модели</a></li>
+                <li><a href="/partners">Партнери</a></li>
                 <li><a href="/home">За нас</a></li>
                 <li><a href="/contactUs">Контакт</a></li>
             </ul>
