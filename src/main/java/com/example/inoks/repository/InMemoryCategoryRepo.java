@@ -31,8 +31,8 @@ public List<Machine> returnMachinesFromCategory(Integer id)
 }
 public List<Machine> listAllMachines()
 {
-    List<Machine> allmachines=machines1;
-    allmachines.addAll(machines2);
+    List<Machine> allmachines=polnilici;
+    allmachines.addAll(pakerki);
 return allmachines;
 
 }

@@ -94,6 +94,16 @@
         * {
 
         }
+        button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            color: black;
+            text-align: center;
+            width: 260px;
+            font-size: 20px;
+            border-radius: 30px;
+
+        }
         .page {
             background-color: #f3f0f0;
         }
@@ -191,9 +201,9 @@
                         <img th:src="@{ '../Sliki/' + ${machine.photopath}}" alt="Machine image"  class="machine-image"/>
                     </div>
                     <div class="machine-text">
-                        <h1>Name: <span th:text="${machine.name}"></span></h1>
-                        <p>Type: <span th:text="${machine.description}"></span></p>
-                        <button class="read-more">Read More</button>
+                        <h1> <span th:text="${machine.name}"></span></h1>
+                        <p>Објаснувањењ: <span th:text="${machine.description}"></span></p>
+                        <button class="read-more">Дознај повеќе</button>
                         <p>Произведена во: <span th:text="${machine.yearCreated}"> година</span></p>
                     </div>
                 </div>
